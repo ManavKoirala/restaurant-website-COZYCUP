@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cozy Cup | Immersive Dining Journey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="ambient-light" aria-hidden="true"></div>
+
+  <div id="cursor" class="custom-cursor" aria-hidden="true"></div>
+  <div id="cursorDot" class="custom-cursor-dot" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top">Cozy Cup</a>
+    <nav class="top-nav">
+      <a class="cursor-text" href="#philosophy">Philosophy</a>
+      <a class="cursor-text" href="#experience">Experience</a>
+      <a class="cursor-text" href="#craft">Craft</a>
+      <a class="cursor-text" href="#menu">Menu</a>
+      <a class="cursor-text" href="#reserve">Reserve</a>
+      <a class="cursor-text" href="/admin">Admin</a>
+    </nav>
+    <div class="music-controls">
+      <button id="musicToggle" class="ambient-btn cursor-hover" aria-pressed="false" type="button">Music: Off</button>
+      <label class="music-volume-wrap" for="musicVolume">
+        Volume
+        <input id="musicVolume" class="music-volume cursor-hover" type="range" min="0" max="1" step="0.05" value="0.4">
+      </label>
+    </div>
+  </header>
+
+  <audio id="backgroundMusic" loop preload="auto">
+    <source src="assets/audio/bg-music.mp3" type="audio/mpeg">
+  </audio>
+
+  <main>
+    <section class="hero scene" id="top">
+      <div class="hero-image layer-back" data-parallax="0.16"></div>
+      <div class="hero-fade"></div>
+      <div class="hero-content layer-front" id="heroContent">
+        <p class="eyebrow split-line">Kathmandu | New York | Milan</p>
+        <h1 class="hero-title split-line" id="heroTitle">Cozy Cup - An Experience, Not a Meal</h1>
+        <p class="hero-caption split-line">A cinematic tasting sequence where silence, light, aroma, and craft compose a single uninterrupted story.</p>
+        <a class="hero-cta cursor-hover" href="#menu">Begin the Journey</a>
+      </div>
+    </section>
+
+    <section class="story-flow" id="philosophy">
+      <article class="story-card scene blend-scene" data-parallax="0.06">
+        <p class="eyebrow split-line">The Philosophy</p>
+        <h2 class="split-line">Born in Nepal, refined for the world.</h2>
+        <img
+          class="story-image reveal-item"
+          src="https://loremflickr.com/1600/900/nepal,himalayas,sunrise?lock=101"
+          alt="Himalayan morning landscape in Nepal"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        >
+        <p class="story-copy split-line" id="signatureTarget">
+          Cozy Cup was conceived in Nepal, where hospitality is measured not by spectacle but by sincerity, patience, and care for every guest at the table. Our philosophy began in Kathmandu kitchens that respected local growers, mountain herbs, and slow cooking traditions, then translated that spirit into a modern fine dining language. We believe luxury should feel composed, not loud, so each detail is intentionally restrained: lighting that calms the room, pacing that allows conversation, plating that celebrates purity, and service that anticipates needs without interruption. As we opened branches in America and Europe, we carried the same foundation with disciplined consistency, adapting to regional produce while preserving our Nepali heart. Every menu is designed to balance comfort with discovery, combining familiar warmth and refined technique in one seamless experience. We train every team to honor origin stories, reduce waste, respect seasonality, and treat flavor as a narrative rather than a trend. Wherever you visit us, the guiding promise remains constant: thoughtful food, graceful rhythm, and a sense of belonging that starts in Nepal and welcomes the world. From first greeting to final farewell, we curate quiet excellence so every guest leaves restored, inspired, and connected to place, craft, and memory.
+        </p>
+      </article>
+
+      <article class="story-card scene blend-scene story-card-alt" id="experience" data-parallax="0.09">
+        <p class="eyebrow split-line">The Experience</p>
+        <h2 class="split-line">A journey that moves from Kathmandu to the world.</h2>
+        <img
+          class="story-image reveal-item"
+          src="https://loremflickr.com/1600/900/kathmandu,nepal,heritage?lock=102"
+          alt="Heritage architecture and street life in Kathmandu"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        >
+        <p class="story-copy split-line">
+          An evening at Cozy Cup is choreographed as a complete sensory journey that begins before the first course arrives and lingers long after the last glass is set down. Guests are welcomed into an atmosphere shaped by Nepal inspired warmth, soft textures, and intentional pacing, then guided through a sequence that moves from bright introductions to deeper, slow building flavors. Each chapter is timed to create emotional rhythm: small openings that awaken curiosity, signature plates that express confidence, and final notes that settle into comfort. Music, lighting, and tableside attention are coordinated to support the cuisine without ever competing with it. This experience was first perfected in Nepal, where generosity and presence define great hosting, and it now travels faithfully across our branches in America and Europe. Local accents may change by city, yet the essence never shifts: attentive service, polished execution, and a calm narrative flow that lets guests feel both celebrated and at ease. Whether you join us for a private dinner, a family milestone, or a quiet weekday retreat, the experience is designed to feel personal, cinematic, and unmistakably rooted in our Nepali origin. It honors tradition while embracing global sophistication with grace, precision, warmth, and continuity.
+        </p>
+      </article>
+
+      <article class="story-card scene blend-scene" id="craft" data-parallax="0.08">
+        <p class="eyebrow split-line">The Craft</p>
+        <h2 class="split-line">Heritage technique with global precision.</h2>
+        <img
+          class="story-image reveal-item"
+          src="https://loremflickr.com/1600/900/nepal,mountain,village,terrace?lock=103"
+          alt="Terraced hills and mountain beauty of Nepal"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        >
+        <p class="story-copy split-line">
+          Craft at Cozy Cup is the disciplined meeting point of tradition, technique, and imagination, executed with the humility that defines our Nepali roots. Our chefs and bartenders begin with rigorous sourcing standards, selecting seasonal produce, carefully raised meats, whole spices, and premium cellar labels that can express clarity on the palate. Preparation is methodical: stocks are reduced patiently, marinades are layered for depth, doughs are rested for texture, and sauces are finished only when balance is exact. Fire, fermentation, acidity, sweetness, and aroma are treated as structural elements, not decoration, so each dish and drink carries purpose from first note to final finish. This craft culture was established in Nepal and continues unchanged across our branches in America and Europe, where teams train under shared protocols and quality benchmarks. We combine regional ingredients with our core culinary grammar to preserve identity while respecting place. Behind every plate stands measured timing, precise temperature control, and attentive pass coordination; behind every cocktail stands calibrated dilution, fresh expression, and polished presentation. The result is consistent excellence that feels effortless to guests, yet is built on daily discipline, deep knowledge, and unwavering respect for origin. Every service refines our standards and honors the vision.
+        </p>
+      </article>
+    </section>
+
+    <section class="menu-section scene" id="menu">
+      <div class="section-intro reveal-item">
+        <p class="eyebrow split-line">Tasting Narrative</p>
+        <h2 class="split-line">A Vertical Journey Through Flavor</h2>
+        <p class="menu-intro split-line">Each course appears as a moment in sequence, not a list. Select one dish to enter a focused tasting frame.</p>
+      </div>
+
+      <div class="filters reveal-item">
+        <button class="filter-btn cursor-hover active" data-filter="all" type="button">All</button>
+        <button class="filter-btn cursor-hover" data-filter="food" type="button">Foods</button>
+        <button class="filter-btn cursor-hover" data-filter="drinks" type="button">Drinks</button>
+      </div>
+
+      <div class="subfilters reveal-item" id="subcategoryFilters"></div>
+
+      <div class="menu-timeline" id="menuGrid"></div>
+      <p class="menu-note" id="menuNote">Preparing curated selections...</p>
+    </section>
+
+    <section class="reservation-section scene" id="reserve">
+      <div class="section-intro reveal-item">
+        <p class="eyebrow split-line">Private Seating</p>
+        <h2 class="split-line">Reserve Your Table Ritual</h2>
+        <p class="menu-intro split-line">A gentle booking flow with deliberate pacing, as if your table is being set in real time.</p>
+      </div>
+
+      <div class="reservation-stage reveal-item" id="reservationStage">
+        <div class="reservation-curtain" id="reservationCurtain">
+          <p>Your table is being prepared.</p>
+          <button id="openReservation" class="hero-cta cursor-hover" type="button">Continue</button>
+        </div>
+
+        <form id="reservationForm" class="reservation-form">
+          <label>
+            Full Name
+            <input class="cursor-hover" type="text" name="full_name" required>
+          </label>
+          <label>
+            Email
+            <input class="cursor-hover" type="email" name="email" required>
+          </label>
+          <div class="form-row">
+            <label>
+              Date
+              <input class="cursor-hover" type="date" name="visit_date" required>
+            </label>
+            <label>
+              Time
+              <input class="cursor-hover" type="time" name="visit_time" required>
+            </label>
+            <label>
+              Guests
+              <input class="cursor-hover" type="number" name="guests" min="1" max="12" required>
+            </label>
+          </div>
+          <label>
+            Notes
+            <textarea class="cursor-hover" name="notes" rows="4" placeholder="Allergies, celebrations, seating preference..."></textarea>
+          </label>
+          <button type="submit" class="hero-cta cursor-hover">Confirm Reservation</button>
+          <p id="reservationStatus" class="reservation-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <aside class="dish-overlay" id="dishOverlay" aria-hidden="true">
+    <div class="dish-overlay-bg"></div>
+    <article class="dish-modal" id="dishModal" role="dialog" aria-modal="true" aria-labelledby="dishTitle">
+      <button id="closeDish" class="dish-close cursor-hover" type="button" aria-label="Close dish">Close</button>
+      <p class="eyebrow" id="dishCategory">Selection</p>
+      <h3 id="dishTitle">Dish</h3>
+      <p id="dishDescription"></p>
+      <div class="prices" id="dishPrices"></div>
+    </article>
+  </aside>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

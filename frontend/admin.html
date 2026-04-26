@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cozy Cup | Admin Reservations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">Cozy Cup</a>
+    <nav class="top-nav">
+      <a href="/">Experience</a>
+      <a href="/admin" aria-current="page">Admin</a>
+    </nav>
+  </header>
+
+  <main class="admin-main">
+    <section class="admin-hero reveal-item">
+      <p class="eyebrow">Reservation Desk</p>
+      <h1>Admin Dashboard</h1>
+      <p class="admin-subtitle">Filter reservations, then edit details directly from this table and save changes instantly.</p>
+    </section>
+
+    <section class="admin-panel reveal-item">
+      <form id="dateFilterForm" class="admin-filters">
+        <label>
+          From Date
+          <input type="date" id="fromDate" name="from_date">
+        </label>
+        <label>
+          To Date
+          <input type="date" id="toDate" name="to_date">
+        </label>
+        <div class="admin-actions">
+          <button type="submit">Apply Filter</button>
+          <button type="button" id="resetFilters" class="ghost-btn">Reset</button>
+        </div>
+      </form>
+
+      <p id="adminStatus" class="reservation-status" aria-live="polite">Loading reservations...</p>
+
+      <div class="table-wrap">
+        <table class="admin-table" id="reservationTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Guest</th>
+              <th>Email</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Guests</th>
+              <th>Notes</th>
+              <th>Booked At</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="reservationBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
